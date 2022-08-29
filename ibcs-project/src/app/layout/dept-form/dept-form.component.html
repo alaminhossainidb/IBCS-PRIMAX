@@ -1,0 +1,26 @@
+<div style="width: 100%;" class="app-background-color">
+    <div class="container mt-2 app-secondary-color">
+  
+      <!-- Form Start -->
+      <header class="label-text">
+        <h1 style="text-align: center;">Department Entry Form</h1>
+      </header>
+      <div>
+        <div class="mb-3 mt-3">
+          <label for="name" class="form-label label-text">Name :</label>
+          <input type="text" class="form-control input-field bg-dark label-text" id="name"
+           placeholder="Enter Department Name" name="deptName" [(ngModel)]="deptName">
+        </div>
+        
+        <div class="mb-3 mt-3">
+          <label for="active" class="form-label label-text">Active :</label> &nbsp;
+          <input type="checkbox" id="active" [(ngModel)]="isActive">
+            <label for="active" class="label-text"> &nbsp; Active</label>
+        </div>
+
+        <button class="btn btn-primary mb-2" (click)="onSubmit()">Submit</button>
+        </div>
+      <!-- Form End -->
+    </div>
+  </div>
+

@@ -1,0 +1,33 @@
+<!-- Navbar start -->
+
+<div style="z-index: 100; background-color: cadetblue;" class=" sticky-top">
+    <div class="container" style="height: fit-content;">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#topBar"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon btn-info"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="topBar">
+            <ul class="navbar-nav">
+
+                <li class="nav-item" style="padding-left: 30%;">
+                    <a [routerLink]="(['/home'])" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a [routerLink]="(['/emp/form'])" class="nav-link">EmpForm</a>
+                </li>
+
+                <li class="nav-item">
+                  <a [routerLink]="(['/dept/form'])" class="nav-link">DeptForm</a>
+                </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->

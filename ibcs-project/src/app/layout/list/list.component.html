@@ -1,0 +1,67 @@
+<div class="container">
+    <span style="cursor: pointer;" class="btn btn-info mt-3" (click)="onEmpClick()">Emp List</span> &nbsp;
+    <span style="cursor: pointer;" class="btn btn-primary mt-3" (click)="onDeptClick()">Dept List</span>
+    <!-- Emp List Start -->
+    <div *ngIf="showEmpList">
+        <h2 style="text-align: center;">Employee List</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>SL</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                    <th>Mobile</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let e of employeeList; let in = index">
+                    <td>{{in+1}}</td>
+                    <td>{{ e.empName }}</td> <!-- {{ i.incidentDate | date: 'dd-MMM-yyyy' }} -->
+                    <td>{{ e.empCode}}</td>
+                    <td>{{e.empDOB  | date: 'dd-MMM-yyyy'}}</td> 
+                    <td>{{e.empGender}}</td>
+                    <td>{{e.empMobileNo}}</td>
+                    <td>{{e.deptName}}</td>
+                    <td>
+                        <i class="btn btn-success" style="cursor: pointer;" (click)="onEmpEditClick(e)">Edit</i> &nbsp;
+                        <i class="btn btn-danger" style="cursor: pointer;" (click)="onEmpDeleteClick(e)">Delete</i>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <!-- Emp List End -->
+    <!-- Dep List Start -->
+    <div *ngIf="showDeptList">
+        <h2 style="text-align: center;">Department List</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>SL</th>
+                    <th>Name</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let d of departmentList; let in = index">
+                    <td>{{in+1}}</td>
+                    <td>{{ d.deptName }}</td> <!-- {{ i.incidentDate | date: 'dd-MMM-yyyy' }} -->
+                    <td>{{ d.isActive }}</td>
+                    <td>
+                        <i class="btn btn-success" style="cursor: pointer;" (click)="onDeptEditClick(d)">Edit</i> &nbsp;
+                        <i class="btn btn-danger" style="cursor: pointer;" (click)="onDeptDeleteClick(d)">Delete</i>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
